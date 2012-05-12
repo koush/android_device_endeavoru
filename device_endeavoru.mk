@@ -7,9 +7,9 @@ $(call inherit-product-if-exists, vendor/htc/endeavoru/endeavoru-vendor.mk)
 
 DEVICE_PACKAGE_OVERLAYS += device/htc/endeavoru/overlay
 
-
+LOCAL_PATH := device/htc/endeavoru
 ifeq ($(TARGET_PREBUILT_KERNEL),)
-	LOCAL_KERNEL := device/htc/endeavoru/kernel
+	LOCAL_KERNEL := $(LOCAL_PATH)/kernel
 else
 	LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
